@@ -1,0 +1,28 @@
+﻿<Controls:MetroWindow
+                      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                      xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+                      xmlns:WPFSoundVisualizationLib="clr-namespace:WPFSoundVisualizationLib;assembly=WPFSoundVisualizationLib" x:Class="NAudioMusicPlayer.MainWindow"
+                      Title="MusicPlayer"
+                      Height="768"
+                      Width="800" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+
+        <WPFSoundVisualizationLib:AlbumArtDisplay x:Name="albumArtPanel" HorizontalAlignment="Left" VerticalAlignment="Top" Height="200" Width="226" Margin="0,-2,0,0"/>
+        <WPFSoundVisualizationLib:DigitalClock x:Name="digitalClock" HorizontalAlignment="Left" Margin="230,3,0,0" VerticalAlignment="Top" Width="562" Height="195" ShowSubSeconds="True" Grid.ColumnSpan="2"/>
+        <WPFSoundVisualizationLib:WaveformTimeline x:Name="waveformTimeline" HorizontalAlignment="Left" Margin="0,484,0,0" VerticalAlignment="Top" Width="792" Height="173" Grid.ColumnSpan="2"/>
+        <WPFSoundVisualizationLib:SpectrumAnalyzer x:Name="spectrumAnalyzer" HorizontalAlignment="Left" Height="286" Margin="0,198,0,0" VerticalAlignment="Top" Width="792" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="textBox" Height="26" Margin="0,656,170,0" TextWrapping="Wrap" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
+        <Button x:Name="button" Content="Browse audio" HorizontalAlignment="Left" Margin="306,657,0,0" VerticalAlignment="Top" Width="162" Height="25" Click="button_Click" Grid.Column="1"/>
+        <Button x:Name="Play" Content="PLay" HorizontalAlignment="Left" Margin="64,690,0,10" Width="200" RenderTransformOrigin="0.5,0.5" Click="Play_Click"/>
+        <Button x:Name="Pause" Content="Pause" HorizontalAlignment="Left" Margin="294,690,0,10" Width="200" RenderTransformOrigin="0.5,0.5" Click="Pause_Click" Grid.ColumnSpan="2"/>
+        <Button x:Name="Stop" Content="Stop" Margin="202,690,68,10" RenderTransformOrigin="0.5,0.5" Click="Stop_Click" Grid.Column="1"/>
+    </Grid>
+
+
+
+</Controls:MetroWindow>
